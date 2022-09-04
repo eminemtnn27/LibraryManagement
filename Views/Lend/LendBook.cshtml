@@ -1,0 +1,22 @@
+﻿
+@model IEnumerable<Data.Models.User>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Lend a book</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach ( Data.Models.User item in Model)
+        {
+            <tr>
+                <td>@item.UserId</td>
+                <td>@item.UserName</td>
+                <td><a class="btn btn-success" asp-area="" asp-controller="Lend" asp-action="LendBook" asp-route-bookId="@item.UserId">Ödünç ver</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
