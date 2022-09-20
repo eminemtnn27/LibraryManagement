@@ -39,7 +39,7 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(
         name: "default",
-        pattern: "{controller=Home}/{action=List}");///*/{id?}*/
+        pattern: "{controller=Auth}/{action=Login}");///*/{id?}*/
 });
 
 app.MapRazorPages();
